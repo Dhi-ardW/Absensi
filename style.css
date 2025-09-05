@@ -1,0 +1,83 @@
+/* warna */
+:root {
+    --primary : #2563eb;
+    --secondary : #f3d4d6;
+    --success : #22C55E;
+    --danger : #EF4444;
+    --text : #111827;
+    --sidebar : #1e293b;
+}
+
+.primar{
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.bg-second {
+    background-color: var(--secondary);
+}
+
+.second {
+    color: var(--secondary);
+}
+
+.text {
+    color: var(--text);
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    font-family: "Roboto", sans-serif;
+}
+
+.navbarnav{
+    background-color: var(--primary);
+    border-right : 1px solid var(--sidebar);
+}
+
+.logo {
+    font-size: 50px;
+    font-family: "inter", sans-serif;
+}
+
+hr {
+    width: 100%;
+    border: 5px solid var(--sidebar);
+    color: var(--sidebar);
+}
+
+.absensi {
+    width: 100%;
+    Color: var(--text);
+    cursor: pointer  ;
+    transition: 0.3s ease;
+}
+
+.absensi.active {
+    background-color: var(--sidebar);
+    color: var(--secondary);}
+
+.absensi:hover {
+background-color: var(--sidebar);
+}
+
+.danger {
+    width: 100%;
+    Color: var(--text);
+    cursor: pointer  ;
+    transition: 0.3s ease-out;
+}
+.danger:hover {
+    background-color: var(--danger);
+}
+
+
+
+

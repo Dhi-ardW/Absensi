@@ -1,0 +1,12 @@
+    warna 
+
+    --primary : #2563eb;
+    --secondary : #f3d4d6;
+    --success : #22C55E;
+    --danger : #EF4444;
+    --text : #111827;
+    --sidebar : #1e293b;
+
+    font 
+    -- roboto
+    -- inter
