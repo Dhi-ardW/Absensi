@@ -1,13 +1,37 @@
 const absensi = document.querySelectorAll(".absensi");
 
-absensi.forEach((item) => {
+absensi.forEach((item, idx) => {
   item.addEventListener("click", function () {
     absensi.forEach((i) => i.classList.remove("active"));
+
     item.classList.add("active");
   });
 });
 
 // notification
+
+// notif profil
+const profil = document.querySelectorAll(".profil");
+const cardprofil = document.querySelector(".card-profil");
+
+profil.forEach((p) => {
+  p.addEventListener("click", function () {
+    cardprofil.classList.add("active");
+  });
+});
+
+// Event listener hanya sekali, di luar forEach
+document.addEventListener("click", function (e) {
+  // cek jika klik di luar cardprofil dan bukan tombol profil
+  if (
+    !cardprofil.contains(e.target) &&
+    !Array.from(profil).some((el) => el.contains(e.target))
+  ) {
+    cardprofil.classList.remove("active");
+  }
+});
+
+// notif log out
 const notif = document.querySelector(".notif");
 const logout = document.getElementById("logout");
 const cardnotif = document.querySelector(".card-notif");
@@ -24,3 +48,13 @@ logout.addEventListener("click", function () {
 });
 
 // login page
+
+// section
+const section = document.querySelectorAll(".section");
+
+absensi.forEach((sec, idx) => {
+  sec.addEventListener("click", function () {
+    section.forEach((s) => s.classList.remove("active"));
+    section[idx].classList.add("active");
+  });
+});

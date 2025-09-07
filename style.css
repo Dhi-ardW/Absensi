@@ -85,6 +85,36 @@ input::-webkit-inner-spin-button {
 
 /* beranda */
 /* notif */
+/* notif profil */
+.card-profil {
+  position: absolute;
+  top: 100px;
+  gap: 20px;
+  right: 50px;
+  width: 150px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #1118273c;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  font-size: 15px;
+  transform: translateY(-400px);
+  transition: transform 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+.card-profil a:hover {
+  cursor: pointer;
+  color: #2563eb;
+}
+
+.card-profil.active {
+  transform: translateY(0);
+}
+
+/* notif log out */
 .notif {
   position: absolute;
   width: 100%;
@@ -128,6 +158,10 @@ input::-webkit-inner-spin-button {
   opacity: 0.6;
 }
 
+#logout:hover {
+  color: var(--danger);
+}
+
 /* navbar */
 .navbarnav {
   background-color: var(--primary);
@@ -167,6 +201,14 @@ hr {
 }
 
 /* home */
+.section {
+  display: none;
+}
+
+.section.active {
+  display: flex;
+}
+
 .profil:hover {
   transition: 0.3s;
 }
