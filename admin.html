@@ -33,7 +33,7 @@
       <a href="" class="fs-5 text-decoration-none text"> Notifikasi </a>
       <a href="" class="fs-5 text-decoration-none text"> Absensi </a>
       <a href="" class="fs-5 text-decoration-none text"> Bantuan </a>
-      <div class="fs-5 text-decoration-none" id="logout">
+      <div class="fs-5 text-decoration-none logout">
         <i class="bi bi-box-arrow-left"></i> Log out
       </div>
     </div>
@@ -64,10 +64,9 @@
       <hr />
       <div
         class="d-flex container-fluid align-items-start justify-content-start flex-column gap-3">
-        <h1 class="fs-3 second">Dasboard</h1>
         <div class="absensi active d-flex gap-3 py-2 px-3 rounded-3">
           <i class="bi bi-house-door second"></i>
-          <h1 class="fs-5 second">Beranda</h1>
+          <h1 class="fs-5 second">Dasboard</h1>
         </div>
         <div class="absensi d-flex gap-3 py-2 px-3 rounded-3">
           <i class="bi bi-card-checklist second"></i>
@@ -94,80 +93,270 @@
           <i class="bi bi-gear second"></i>
           <h1 class="fs-5 second">Pengaturan</h1>
         </div>
-        <div class="danger d-flex gap-3 py-2 px-3 rounded-3" id="logout">
+        <div class="danger d-flex gap-3 py-2 px-3 rounded-3 logout">
           <i class="bi bi-box-arrow-left second"></i>
-          <h1 class="fs-5 second">Logout</h1>
+          <h1 class="fs-5 second">Log out</h1>
         </div>
       </div>
     </nav>
     <!-- end sidebar navigation -->
 
     <!-- content -->
-    <div class="w-75 second">
-      <div
-        class="section active align-items-center justify-content-between gap-3 my-2 px-5 py-2 border-bottom">
-        <!-- <img src="" alt=""> -->
-        <h1 class="fs-1 text">Beranda</h1>
-
+    <div class="w-75 h-100 bg-white">
+      <div class="section active flex-column">
         <div
-          class="d-flex align-items-center gap-2 align-items-center px-2 rounded-3 profil">
-          <i class="bi bi-chevron-down text" style="font-size: 20px"></i>
-          <i class="bi bi-person-circle text" style="font-size: 40px"></i>
+          class="border-bottom w-100 d-flex w-100 align-items-center justify-content-between px-5 py-3">
+          <h1 class="fs-1 text">Dasboard</h1>
+
+          <div class="d-flex align-items-center gap-3 align-items-center">
+            <div class="d-flex px-2 notifikasi rounded-3 position-relative">
+              <i class="bi bi-bell text" style="font-size: 30px"></i>
+              <div class="notif-alert" id="notif-alert"></div>
+            </div>
+            <div class="profil notifikasi px-2 rounded-3">
+              <i class="bi bi-person-circle text" style="font-size: 35px"></i>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 px-4 d-flex flex-column">
+          <div
+            class="d-flex w-100 justify-content-between bg-second border border-2 rounded-3 px-5 py-4 shadow border-primar">
+            <div
+              class="card-status py-3 bg-primar second flex-column d-flex align-items-center text-center justify-content-center rounded-3">
+              <i class="bi bi-people-fill fs-1"></i>
+              <h2 class="fs-6 mt-3">
+                Karyawan :
+                <span>50</span>
+              </h2>
+            </div>
+            <div
+              class="card-status py-3 bg-primar second flex-column d-flex align-items-center text-center justify-content-center rounded-3">
+              <i class="bi bi-person-workspace fs-1"></i>
+              <h2 class="fs-6 mt-3">
+                Divisi :
+                <span>7</span>
+              </h2>
+            </div>
+            <div
+              class="card-status py-3 bg-primar second flex-column d-flex align-items-center text-center justify-content-center rounded-3">
+              <i class="bi bi-clipboard-check fs-1"></i>
+              <h2 class="fs-6 mt-3">
+                Absensi :
+                <span>37</span>
+              </h2>
+            </div>
+            <div
+              class="card-status py-3 bg-primar second flex-column d-flex align-items-center text-center justify-content-center rounded-3">
+              <i class="bi bi-slash-circle fs-1"></i>
+              <h2 class="fs-6 mt-3">
+                Izin :
+                <span>13</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 w-100 Dasboard d-flex px-4 gap-4">
+          <div
+            class="table-scroll d-flex flex-column align-items-start w-75 bg-second rounded-3 border border-2 border-primar shadow px-4 py-3 text">
+            <div class="d-flex align-items-end text-center gap-3">
+              <i class="bi bi-alarm fs-4"></i>
+              <h1 class="fs-5">Aktivitas Terbaru</h1>
+            </div>
+            <table class="w-100 mt-3 text-center">
+              <thead>
+                <tr class="bg-primary">
+                  <th>Nama</th>
+                  <th>Nomor</th>
+                  <th>Waktu</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Rizky Maulana</td>
+                  <td>001</td>
+                  <td>08:00</td>
+                  <td class="text-success">Hadir</td>
+                </tr>
+                <tr>
+                  <td>Aisyah Putri</td>
+                  <td>002</td>
+                  <td>08:05</td>
+                  <td class="text-success">Hadir</td>
+                </tr>
+                <tr>
+                  <td>Budi Santoso</td>
+                  <td>003</td>
+                  <td>08:10</td>
+                  <td class="text-danger">Terlambat</td>
+                </tr>
+                <tr>
+                  <td>Siti Nurhaliza</td>
+                  <td>004</td>
+                  <td>08:00</td>
+                  <td class="text-success">Hadir</td>
+                </tr>
+                <tr>
+                  <td>Andi Wijaya</td>
+                  <td>005</td>
+                  <td>08:15</td>
+                  <td class="text-danger">Terlambat</td>
+                </tr>
+                <tr>
+                  <td>Linda Susanti</td>
+                  <td>006</td>
+                  <td>08:00</td>
+                  <td class="text-success">Hadir</td>
+                </tr>
+                <tr>
+                  <td>Rina Kurnia</td>
+                  <td>007</td>
+                  <td>08:20</td>
+                  <td class="text-danger">Terlambat</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div
+            class="d-flex flex-column bg-second px-4 py-3 border border-2 border-primar w-25 text rounded-3 shadow">
+            <div class="d-flex align-items-end text-center gap-3">
+              <i class="bi bi-tools fs-5"></i>
+              <h1 class="fs-5">Aksi Cepat</h1>
+            </div>
+            <div class="mt-3 w-100">
+              <a
+                href=""
+                class="d-flex tool align-items-center text-center text-decoration-none text mb-3 w-100 px-3 rounded-3 py-2 bg-primar">
+                <i class="bi bi-person-plus fs-5 second"></i>
+                <h1 class="fs-6 ms-3 second">Tambah Karyawan</h1>
+              </a>
+              <a
+                href=""
+                class="d-flex tool align-items-center text-center text-decoration-none text mb-3 w-100 px-3 rounded-3 py-2 bg-primar">
+                <i class="bi bi-bell fs-5 second"></i>
+                <h1 class="fs-6 ms-3 second">Notifikasi</h1>
+              </a>
+              <a
+                href=""
+                class="d-flex tool align-items-center text-center text-decoration-none text mb-3 w-100 px-3 rounded-3 py-2 bg-primar">
+                <i class="bi bi-clipboard-data fs-5 second"></i>
+                <h1 class="fs-6 ms-3 second">Manajemen</h1>
+              </a>
+              <a
+                href=""
+                class="d-flex tool align-items-center text-center text-decoration-none text mb-3 w-100 px-3 rounded-3 py-2 bg-primar">
+                <i class="bi bi-person-fill-check fs-5 second"></i>
+                <h1 class="fs-6 ms-3 second">Riwayat Login</h1>
+              </a>
+              <a
+                href=""
+                class="d-flex tool align-items-center text-center text-decoration-none text mb-3 w-100 px-3 rounded-3 py-2 bg-primar">
+                <i class="bi bi-question-circle-fill fs-5 second"></i>
+                <h1 class="fs-6 ms-3 second">Bantuan</h1>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      <div
-        class="section align-items-center justify-content-between gap-3 my-2 px-5 py-2 border-bottom">
-        <!-- <img src="" alt=""> -->
-        <h1 class="fs-1 text">Daftar Kehadiran</h1>
-
+      <div class="section flex-column">
         <div
-          class="d-flex align-items-center gap-2 align-items-center px-2 rounded-3 profil">
-          <i class="bi bi-chevron-down text" style="font-size: 20px"></i>
-          <i class="bi bi-person-circle text" style="font-size: 40px"></i>
+          class="border-bottom w-100 d-flex w-100 align-items-center justify-content-between px-5 py-3">
+          <h1 class="fs-1 text">Daftar Kehadiran</h1>
+
+          <div class="d-flex align-items-center gap-3 align-items-center">
+            <div class="d-flex px-2 notifikasi rounded-3 position-relative">
+              <i class="bi bi-bell text" style="font-size: 30px"></i>
+              <div class="notif-alert" id="notif-alert"></div>
+            </div>
+            <div class="profil notifikasi px-2 rounded-3">
+              <i class="bi bi-person-circle text" style="font-size: 35px"></i>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-3 w-100 d-flex w-100 align-items-center justify-content-between px-5 py-3">
+          <h1 class="fs-3">Selamat Datang Di Tampilan absensi</h1>
         </div>
       </div>
-      <div
-        class="section align-items-center justify-content-between gap-3 my-2 px-5 py-2 border-bottom">
-        <!-- <img src="" alt=""> -->
-        <h1 class="fs-1 text">Shift Kerja</h1>
-
+      <div class="section flex-column">
         <div
-          class="d-flex align-items-center gap-2 align-items-center px-2 rounded-3 profil">
-          <i class="bi bi-chevron-down text" style="font-size: 20px"></i>
-          <i class="bi bi-person-circle text" style="font-size: 40px"></i>
+          class="border-bottom w-100 d-flex w-100 align-items-center justify-content-between px-5 py-3">
+          <h1 class="fs-1 text">Shift Kerja</h1>
+
+          <div class="d-flex align-items-center gap-3 align-items-center">
+            <div class="d-flex px-2 notifikasi rounded-3 position-relative">
+              <i class="bi bi-bell text" style="font-size: 30px"></i>
+              <div class="notif-alert" id="notif-alert"></div>
+            </div>
+            <div class="profil notifikasi px-2 rounded-3">
+              <i class="bi bi-person-circle text" style="font-size: 35px"></i>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-3 w-100 d-flex w-100 align-items-center justify-content-between px-5 py-3">
+          <h1 class="fs-3">Selamat Datang Di Tampilan Shift kerja</h1>
         </div>
       </div>
-      <div
-        class="section align-items-center justify-content-between gap-3 my-2 px-5 py-2 border-bottom">
-        <!-- <img src="" alt=""> -->
-        <h1 class="fs-1 text">Karyawan & Divisi</h1>
-
+      <div class="section flex-column">
         <div
-          class="d-flex align-items-center gap-2 align-items-center px-2 rounded-3 profil">
-          <i class="bi bi-chevron-down text" style="font-size: 20px"></i>
-          <i class="bi bi-person-circle text" style="font-size: 40px"></i>
+          class="border-bottom w-100 d-flex w-100 align-items-center justify-content-between px-5 py-3">
+          <h1 class="fs-1 text">Data Karyawan</h1>
+
+          <div class="d-flex align-items-center gap-3 align-items-center">
+            <div class="d-flex px-2 notifikasi rounded-3 position-relative">
+              <i class="bi bi-bell text" style="font-size: 30px"></i>
+              <div class="notif-alert" id="notif-alert"></div>
+            </div>
+            <div class="profil notifikasi px-2 rounded-3">
+              <i class="bi bi-person-circle text" style="font-size: 35px"></i>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-3 w-100 d-flex w-100 align-items-center justify-content-between px-5 py-3">
+          <h1 class="fs-3">Selamat Datang Di Tampilan Data Karyawan</h1>
         </div>
       </div>
-      <div
-        class="section align-items-center justify-content-between gap-3 my-2 px-5 py-2 border-bottom">
-        <!-- <img src="" alt=""> -->
-        <h1 class="fs-1 text">Laporan Kerja</h1>
-
+      <div class="section flex-column">
         <div
-          class="d-flex align-items-center gap-2 align-items-center px-2 rounded-3 profil">
-          <i class="bi bi-chevron-down text" style="font-size: 20px"></i>
-          <i class="bi bi-person-circle text" style="font-size: 40px"></i>
+          class="border-bottom w-100 d-flex w-100 align-items-center justify-content-between px-5 py-3">
+          <h1 class="fs-1 text">Laporan</h1>
+
+          <div class="d-flex align-items-center gap-3 align-items-center">
+            <div class="d-flex px-2 notifikasi rounded-3 position-relative">
+              <i class="bi bi-bell text" style="font-size: 30px"></i>
+              <div class="notif-alert" id="notif-alert"></div>
+            </div>
+            <div class="profil notifikasi px-2 rounded-3">
+              <i class="bi bi-person-circle text" style="font-size: 35px"></i>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-3 w-100 d-flex w-100 align-items-center justify-content-between px-5 py-3">
+          <h1 class="fs-3">Selamat Datang Di Tampilan Laporan</h1>
         </div>
       </div>
-      <div
-        class="section align-items-center justify-content-between gap-3 my-2 px-5 py-2 border-bottom">
-        <!-- <img src="" alt=""> -->
-        <h1 class="fs-1 text">Pengaturan</h1>
-
+      <div class="section flex-column">
         <div
-          class="d-flex align-items-center gap-2 align-items-center px-2 rounded-3 profil">
-          <i class="bi bi-chevron-down text" style="font-size: 20px"></i>
-          <i class="bi bi-person-circle text" style="font-size: 40px"></i>
+          class="border-bottom w-100 d-flex w-100 align-items-center justify-content-between px-5 py-3">
+          <h1 class="fs-1 text">Pengaturan</h1>
+
+          <div class="d-flex align-items-center gap-3 align-items-center">
+            <div class="d-flex px-2 notifikasi rounded-3 position-relative">
+              <i class="bi bi-bell text" style="font-size: 30px"></i>
+              <div class="notif-alert" id="notif-alert"></div>
+            </div>
+            <div class="profil notifikasi px-2 rounded-3">
+              <i class="bi bi-person-circle text" style="font-size: 35px"></i>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-3 w-100 d-flex w-100 align-items-center justify-content-between px-5 py-3">
+          <h1 class="fs-3">Selamat Datang Di Tampilan Pengaturan</h1>
         </div>
       </div>
     </div>
