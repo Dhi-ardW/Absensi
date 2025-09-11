@@ -16,6 +16,14 @@
   background-color: var(--danger);
 }
 
+.bg-gray {
+  background-color: rgb(102, 102, 102);
+}
+
+.bg-navy {
+  background-color: navy;
+}
+
 .bg-second {
   background-color: var(--secondary);
 }
@@ -30,6 +38,14 @@
 
 .text {
   color: var(--text);
+}
+
+.text-success {
+  color: var(--success);
+}
+
+.text-danger {
+  color: var(--danger);
 }
 
 .roboto {
@@ -238,7 +254,7 @@ hr {
 
 /* dsaboard */
 
-.Dasboard {
+.tabel-dasboard {
   height: 375px;
 }
 .card-status {
@@ -251,7 +267,6 @@ hr {
 }
 
 .table-scroll {
-  max-height: 375px;
   overflow-y: auto;
   width: 100%;
 }
@@ -280,10 +295,10 @@ td {
 }
 
 tr:nth-child(odd) {
-  background-color: #cecece; /* warna untuk kolom ganjil */
+  background-color: #e9e5e5; /* warna untuk kolom ganjil */
 }
 tr:nth-child(even) {
-  background-color: #e9e5e5; /* warna untuk kolom genap */ /* warna untuk kolom ganjil */
+  background-color: #cecece; /* warna untuk kolom genap */ /* warna untuk kolom ganjil */
 }
 
 /* aksi cepat */
@@ -304,4 +319,54 @@ tr:nth-child(even) {
   background-color: #1c51c4;
   cursor: pointer;
   color: var(--secondary);
+}
+
+/* absensi */
+
+.card-absen {
+  width: 100%;
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card-absen:hover {
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.5);
+}
+
+.tabel-absen {
+  height: 375px;
+}
+
+.scroll-absensi {
+  overflow-x: auto;
+  height: 450px;
+}
+
+.scroll-absensi::-webkit-scrollbar {
+  height: 8px;
+}
+.scroll-absensi::-webkit-scrollbar:vertical {
+  display: none;
+}
+
+.scroll-absensi::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-absensi::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.scroll-absensi:hover::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+.scroll-absensi:hover::-webkit-scrollbar-track {
+  background: #d0cfcf;
+}
+
+.table-absensi {
+  min-width: 150%;
 }
