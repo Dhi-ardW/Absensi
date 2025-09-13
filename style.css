@@ -12,6 +12,10 @@
   background-color: var(--primary);
 }
 
+.bg-yellow {
+  background-color: rgb(221, 225, 1);
+}
+
 .bg-danger {
   background-color: var(--danger);
 }
@@ -87,8 +91,6 @@ body {
   color: var(--text);
   padding: 10px 0px;
   border-radius: 5px;
-
-  width: 100%;
 }
 
 input::-webkit-outer-spin-button,
@@ -101,6 +103,12 @@ input::-webkit-inner-spin-button {
   width: 100%;
   outline: none;
   border: none;
+}
+
+.input-search {
+  width: 400px;
+  border: 2px solid var(--text);
+  padding-left: 10px;
 }
 
 /* beranda */
@@ -339,7 +347,8 @@ tr:nth-child(even) {
 }
 
 .scroll-absensi {
-  overflow-x: auto;
+  overflow: auto;
+
   height: 450px;
 }
 
@@ -369,4 +378,28 @@ tr:nth-child(even) {
 
 .table-absensi {
   min-width: 150%;
+}
+
+/*  data karywan */
+.btn-edit {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-edit:hover {
+  opacity: 0.8;
+}
+
+/* pengaturan */
+
+.Pengaturan {
+  padding: 10px 10px;
+  text-align: end;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.Pengaturan:hover {
+  color: var(--primary);
 }

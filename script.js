@@ -61,3 +61,11 @@ absensi.forEach((sec, idx) => {
     section[idx].classList.add("active");
   });
 });
+
+// jam kerja
+// tanggal default
+const tanggal = document.querySelectorAll(".tanggal");
+
+tanggal.forEach((date) => {
+  date.value = new Date().toISOString().split("T")[0];
+});
